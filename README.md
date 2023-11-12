@@ -9,5 +9,6 @@
       * MySQL Driver
 * Frontend:
     * Angular
+    * Bootstrap
 * Bases de datos:
     * MySQL
