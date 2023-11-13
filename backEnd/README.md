@@ -19,3 +19,8 @@ errores al levantar el servidor de Spring Boot.
    ..*_ y colocar las columnas en el orden deseado, ya que Hibernate lo acomoda por orden alfabético.
 7. Crear la **Capa de acceso a datos:** Aquí el package _**«repository»**_ contendrá los archivos de acceso a los 
    objetos de los modelos/entidades de la base de datos.
+8. Crear la interfase _**IProductoRepositorio**_ que herede de JpaRepository<> para extender las funcionalidades este.
+9. Crear la **Capa de servicios:** Aquí el package _**«services»**_ contendrá los archivos que llevarán toda la 
+   lógica necesaria para comunicar.
+10. Crear la interfase _**IProductoServicio**_ que es la que se va a encargar de recuperar la información de la base 
+    de datos.
