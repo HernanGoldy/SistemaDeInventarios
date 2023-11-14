@@ -22,5 +22,12 @@ errores al levantar el servidor de Spring Boot.
 8. Crear la interfase _**IProductoRepositorio**_ que herede de JpaRepository<> para extender las funcionalidades este.
 9. Crear la **Capa de servicios:** Aquí el package _**«services»**_ contendrá los archivos que llevarán toda la 
    lógica necesaria para comunicar.
-10. Crear la interfase _**IProductoServicio**_ que es la que se va a encargar de recuperar la información de la base 
-    de datos.
+10. Crear la interfase _**IProductoServicio**_ que contendrá los métodos básicos para poder recuperar la información 
+    de la base de datos:
+      * listarProductos()
+      * buscarProductoPorId(Integer idProducto)
+      * agregarProducto(Producto producto)
+      * eliminarProductoPorId(Integer idProducto)
+11. Crear una clase «concreta» _**ProductoServicioImp**_ que va a implementar la interfase _*IProductoServicio*_ y 
+    la cual llevará la notación @Service.
+    * @Autowired _*IProductoRepositorio*_ - Inyectamos esto para comunicarnos con la capa de acceso a datos.
