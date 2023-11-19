@@ -39,4 +39,4 @@ errores al levantar el servidor de Spring Boot.
       * @CrossOrigin(value = "http://localhost:4200") - Hacemos las peticiones del frontend al backend a través de 
         Angular.
 14. Inyectamos la capa de servicios para que se comunique con el controlador por medio del @Autowired.
-15. Creamos el primer método para obtener todos los objetos de tipo producto y este será mediante el método GET.
+15. Creamos el primer método de tipo GET para obtener todos los objetos de tipo producto.
