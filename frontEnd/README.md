@@ -14,12 +14,12 @@ Ejecute `ng serve -o` para levantar un servidor de desarrollo y navegue hasta `h
 2. Crear, sobre la carpeta raíz, una clase que va a representar los objetos de tipo Producto con el nombre de _*producto*_:
     * ng g class producto --skip-tests
 
->_**NOTA:**_ la bandera «g» significa "generate" y «--skip-tests» se coloca para evitar que se cree la clase de prueba.
+>**NOTA:** la bandera «g» significa "generate" y «--skip-tests» se coloca para evitar que se cree la clase de prueba.
 
 3. Crear, sobre la carpeta raíz, los componentes para listar todos los objetos de tipo Producto:
     * ng g c producto-lista --skip-tests
 
->_**NOTA:**_ la bandera «c» significa "component" y se coloca para crear componentes en Angular.
+>**NOTA:** la bandera «c» significa "component" y se coloca para crear componentes en Angular.
 
 4. Eliminar los archivos innecesarios (_*app.component.spect.ts*_ y _*producto-lista.component.css*_) y (dentro del archivo _*producto-lista.ts*_) eliminar la línea donde figura el styleUrls:
 
