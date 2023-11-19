@@ -21,7 +21,7 @@ errores al levantar el servidor de Spring Boot.
    objetos de los modelos/entidades de la base de datos.
 8. Crear la interfase _**IProductoRepositorio**_ que herede de JpaRepository<> para extender las funcionalidades este.
 9. Crear la **Capa de servicios:** Aquí el package _**«services»**_ contendrá los archivos que llevarán toda la 
-   lógica necesaria para comunicar.
+   lógica necesaria para comunicar. Esta capa de servicios se conectará con la capa de acceso a datos (repository).
 10. Crear la interfase _**IProductoServicio**_ que contendrá los métodos básicos para poder recuperar la información 
     de la base de datos:
       * listarProductos()
@@ -30,4 +30,13 @@ errores al levantar el servidor de Spring Boot.
       * eliminarProductoPorId(Integer idProducto)
 11. Crear una clase «concreta» _**ProductoServicioImp**_ que va a implementar la interfase _*IProductoServicio*_ y 
     la cual llevará la notación @Service.
-    * @Autowired _*IProductoRepositorio*_ - Inyectamos esto para comunicarnos con la capa de acceso a datos.
+      * @Autowired _*IProductoRepositorio*_ - Inyectamos esto para comunicarnos con la capa de acceso a datos.
+12. Crear el controlador de tipo REST: Aquí el package _**«controllers»**_ contendrá los archivos
+13. Crear la clase _**ProductoControlador**_ la cual será un controlador de tipo REST y llevará las siguientes 
+    notaciones:
+      * @RestController - Le indicará a Spring Boor que esta clase es de tipo REST.
+      * @RequestMapping() - Aquí crearemos un context path para hacer las peticiones directamente al nombre de la app.
+      * @CrossOrigin(value = "http://localhost:4200") - Hacemos las peticiones del frontend al backend a través de 
+        Angular.
+14. Inyectamos la capa de servicios para que se comunique con el controlador por medio del @Autowired.
+15. Creamos el primer método para obtener todos los objetos de tipo producto y este será mediante el método GET.
