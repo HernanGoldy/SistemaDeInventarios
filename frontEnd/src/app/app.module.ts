@@ -1,9 +1,11 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ProductoListaComponent } from './producto-lista/producto-lista.component';
+
 
 @NgModule({
   declarations: [
@@ -12,6 +14,7 @@ import { ProductoListaComponent } from './producto-lista/producto-lista.componen
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule
   ],
   providers: [],

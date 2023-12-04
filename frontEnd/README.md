@@ -26,3 +26,8 @@ Ejecute `ng serve -o` para levantar un servidor de desarrollo y navegue hasta `h
 5. Quitamos todo el contenido que hay en el archivo _*app.component.html*_ y lo colocamos en el archivo _*producto-lista.component.html*_.
 
 6. En el archivo _*app.component.html*_ colocamos solamente el componente de _*app-producto-lista*_.
+
+7. Crear, sobre la carpeta raíz, los componentes de servicios para hacer las peticiones al backend:
+    * ng g s producto --skip-tests
+
+>**NOTA:** la bandera «s» significa "servicio" y se coloca para crear componentes de servicios en Angular.

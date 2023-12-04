@@ -2,5 +2,5 @@ export class Producto {
     idProducto: number;
     descripcion: string;
     precio: number;
-    exixtencia: number;
+    existencia: number;
 }
