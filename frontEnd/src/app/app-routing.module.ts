@@ -5,8 +5,8 @@ import { AgregarProductoComponent } from './agregar-producto/agregar-producto.co
 
 // http:localhost:4200/productos
 const routes: Routes = [
-  {path: '', redirectTo: 'productos', pathMatch: 'full'},
   {path: 'productos', component: ProductoListaComponent},
+  {path: '', redirectTo: 'productos', pathMatch: 'full'},
   {path: 'agregar-producto', component: AgregarProductoComponent}
 ];
 
