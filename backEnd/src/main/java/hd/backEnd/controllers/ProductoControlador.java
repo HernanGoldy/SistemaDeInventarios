@@ -1,8 +1,10 @@
 package hd.backEnd.controllers;
 
+import hd.backEnd.exceptions.RecursoNoEncontradoExcepcion;
 import hd.backEnd.models.Producto;
 import hd.backEnd.services.ProductoServicioImp;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -35,5 +37,14 @@ public class ProductoControlador {
     @PostMapping("/productos")
     public Producto addProduct(@RequestBody Producto producto) {
         return this.productoServicio.agregarProducto(producto);
+    }
+
+    @GetMapping("/productos/{id}")
+    public ResponseEntity<Producto> getProductById(@PathVariable int id) {
+        Producto producto = this.productoServicio.buscarProductoPorId(id);
+        if(producto != null)
+            return ResponseEntity.ok(producto);
+        else
+            throw new RecursoNoEncontradoExcepcion("No se encontró el id: " + id);
     }
 }
