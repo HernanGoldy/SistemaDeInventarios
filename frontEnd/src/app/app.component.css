@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amaranth:ital@1&display=swap');
+
+
+.footer_group {
+    position: absolute;
+    bottom: 0px;
+    color: #D1CDC7;
+    width: 100%;
+}
+.footer_container {
+    background: #181A1B;
+}
+.column-2,
+.column-3, .column-4 {
+    padding: 20px 50px 20px 0px;
+}
+.column-1 {
+    margin-top: 50px;
+    margin-right: 30px;
+    padding: 0;
+}
+.columns_container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: 0;
+}
+.column_title {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+.networks-info {
+    font-family: 'Amaranth', sans-serif;
+    font-style: italic;
+    font-size: 18px;
+    font-weight: 400;
+    width: 500px;
+}
+.networks-icons {
+    display: flex;
+}
+.column_item_1, .column_item_2,
+.column_item_3 {
+    list-style: none;
+}
+.column_item_2,
+.column_item_3 {
+    margin-left: -40px;
+}
+.column_item_2, .column_item_3,
+.news-info, .copyright_container {
+    font-family: 'Red Hat Display', sans-serif;
+    font-weight: 200;
+    font-size: 17px;
+}
+.news-info {
+    width: 400px;
+    padding-right: 50px;
+    text-align: justify;
+}
+.button-email {
+    position: absolute;
+    background: none;
+    border: none;
+    margin-top: -36px;
+    margin-left: 355px;
+}
+.icon-send {
+    font-size: 25px;
+}
+.enter_email {
+    background: none;
+    position: relative;
+    width: 100%;
+    height: 45px;
+    margin-top: 10px;
+    border: 1px solid #4D4C49;
+    border-radius: 5px;
+    padding-left: 15px;
+    font-family: 'Amaranth', sans-serif;
+    font-style: italic;
+    font-size: 18px;
+    font-weight: 400;
+}
+.networks-icons {
+    margin-left: -38px;
+}
+.fa-twitter, .fa-telegram-plane,
+.fa-facebook, .fa-instagram,
+.fa-pinterest, .fa-vimeo {
+    font-size: 20px;
+    padding: 15px 8px;
+}
+.list-icons:hover {
+    color: #FFBF69;
+    cursor: pointer;
+}
+.list-icons {
+    color: #00E8C6;
+}
+.hour_icon {
+    color: #00E8C6;
+}
+.networks-info, .column_item_2,
+.column_item_3, .news-info,
+.copyright {
+    color: #9E9689;
+}
+.enter_email {
+    color: #4D4C49;
+}
+.copyright_container {
+    background: #1b1e1ffd;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+}
+
+
+/* ---------- Mediaqueris disp. móviles ---------- */
+@media (max-width: 573px) {
+    .column-1, .column-2,
+    .column-3, .news-info,
+    .networks-info {
+        width: 300px;
+        margin-right: 0;
+    }
+    .column-4 {
+        margin-left: 50px;
+    }
+    .button-email {
+        position: absolute;
+        background: none;
+        border: none;
+        margin-top: -36px;
+        margin-left: 260px;
+    }
+    .enter_email {
+        max-width: 100%;
+        margin-right: 0;
+    }
+    .copyright_container {
+        background-color: #1b1e1ffd;
+        height: 100%;
+    }
+}

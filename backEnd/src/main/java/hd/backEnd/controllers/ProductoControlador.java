@@ -47,4 +47,17 @@ public class ProductoControlador {
         else
             throw new RecursoNoEncontradoExcepcion("No se encontró el id: " + id);
     }
+
+    @PutMapping("/productos/{id}")
+    public ResponseEntity<Producto> updateProductById(@PathVariable int id, @RequestBody Producto productoRecibido) {
+        Producto producto = this.productoServicio.buscarProductoPorId(id);
+        if (producto == null) {
+            throw new RecursoNoEncontradoExcepcion("No se encontró el id: " + id);
+        }
+        producto.setDescripcion(productoRecibido.getDescripcion());
+        producto.setPrecio(productoRecibido.getPrecio());
+        producto.setExistencia(productoRecibido.getExistencia());
+        this.productoServicio.agregarProducto(producto);
+        return ResponseEntity.ok(producto);
+    }
 }
