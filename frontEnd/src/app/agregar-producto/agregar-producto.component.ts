@@ -11,7 +11,10 @@ import { ProductoService } from '../producto.service';
 export class AgregarProductoComponent {
   producto: Producto = new Producto();
 
-  constructor(private productoServicio: ProductoService, private enrutador: Router) {}
+  constructor(
+    private productoServicio: ProductoService,
+    private enrutador: Router
+  ) {}
 
   onSubmit() {
     this.guardarProducto();
@@ -20,9 +23,7 @@ export class AgregarProductoComponent {
   guardarProducto() {
     this.productoServicio.addProduct(this.producto).subscribe(
       {
-        next: (datos) => {
-          this.irListaProductos();
-        },
+        next: (datos) => {this.irListaProductos();},
         error: (err: any) => {console.log(err)}
       }
     );

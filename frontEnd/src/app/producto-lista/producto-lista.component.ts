@@ -10,7 +10,10 @@ import { Router } from '@angular/router';
 export class ProductoListaComponent {
   productos: Producto[];
 
-  constructor(private productoServicio: ProductoService, private enrutador: Router) {}
+  constructor(
+    private productoServicio: ProductoService,
+    private enrutador: Router
+  ) {}
 
   ngOnInit(){
     // Cargamos todos los productos
@@ -20,9 +23,7 @@ export class ProductoListaComponent {
   private obtenerProductos() {
     // Consumir los datos del observable (suscribirnos)
     this.productoServicio.getProductList().subscribe(
-      (datos => {
-        this.productos = datos;
-      })
+      (datos => {this.productos = datos})
     )
   }
 
