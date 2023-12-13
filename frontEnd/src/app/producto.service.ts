@@ -25,4 +25,9 @@ export class ProductoService {
   getProductById(id: number) {
     return this.clienteHttp.get<Producto>(`${this.urlBase}/${id}`);
   }
+
+  // Método para editar/actualizar un producto por su id
+  updateProductById(id: number, producto: Producto): Observable<Object> {
+    return this.clienteHttp.put(`${this.urlBase}/${id}`, producto);
+  }
 }
