@@ -29,5 +29,19 @@ export class EditarProductoComponent {
 
   onSubmit() {
     // Editar el producto
+    this.guardarProductoEditado();
+  }
+
+  guardarProductoEditado() {
+    this.productoServicio.updateProductById(this.id, this.producto).subscribe(
+      {
+        next: (datos) => this.irProductoLista(),
+        error: (err: any) => console.log(err)
+      }
+    );
+  }
+
+  irProductoLista() {
+    this.enrutador.navigate(['/productos'])
   }
 }
