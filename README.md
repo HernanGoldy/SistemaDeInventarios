@@ -12,3 +12,5 @@
     * Bootstrap
 * Bases de datos:
     * MySQL
+
+![Descripción de la imagen](/sisInv.png)
