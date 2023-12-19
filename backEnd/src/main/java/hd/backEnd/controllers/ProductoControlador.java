@@ -7,7 +7,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * @author <b>@RequestMapping()</b> - Agrego un «context path» con el nombre de
@@ -59,5 +61,17 @@ public class ProductoControlador {
         producto.setExistencia(productoRecibido.getExistencia());
         this.productoServicio.agregarProducto(producto);
         return ResponseEntity.ok(producto);
+    }
+
+    @DeleteMapping("/productos/{id}")
+    public ResponseEntity<Map<String, Boolean>> deleteProductById(@PathVariable int id) {
+        Producto producto = productoServicio.buscarProductoPorId(id);
+        if (producto == null) {
+            throw new RecursoNoEncontradoExcepcion("No se encontró el id: " + id);
+        }
+        this.productoServicio.eliminarProductoPorId(producto.getIdProducto());
+        Map<String, Boolean> respuesta =new HashMap<>();
+        respuesta.put("Producto eliminado", Boolean.TRUE);
+        return ResponseEntity.ok(respuesta);
     }
 }
