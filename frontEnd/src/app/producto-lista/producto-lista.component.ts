@@ -30,4 +30,13 @@ export class ProductoListaComponent {
   editarProducto(id: number) {
     this.enrutador.navigate(['editar-producto', id]);
   }
+
+  eliminarProducto(id: number) {
+    this.productoServicio.deleteProductById(id).subscribe(
+      {
+        next: (datos) => this.obtenerProductos(),
+        error: (err) => console.log(err)
+      }
+    );
+  }
 }

@@ -30,4 +30,9 @@ export class ProductoService {
   updateProductById(id: number, producto: Producto): Observable<Object> {
     return this.clienteHttp.put(`${this.urlBase}/${id}`, producto);
   }
+
+  // Método para eliminar un producto por su id
+  deleteProductById(id: number): Observable<Object> {
+    return this.clienteHttp.delete(`${this.urlBase}/${id}`);
+  }
 }
